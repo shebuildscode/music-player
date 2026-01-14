@@ -1,0 +1,288 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.selected {
+  border: 2px solid rgb(0, 0, 0, 0.5);
+}
+
+.wrapper {
+  background-image: linear-gradient(
+    to right top,
+    #cfbfe0,
+    #f9c1dacc,
+    #ffc9c2cc,
+    #ffdda9cc,
+    #f5f8a7cc
+  );
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  width: 400px;
+  height: 600px;
+
+  overflow: hidden;
+}
+
+.player {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  margin: 10px;
+  margin-right: 5px;
+  padding-right: 30px;
+  background: transparent;
+  overflow-y: auto;
+}
+
+.player::-webkit-scrollbar {
+  width: 5px;
+}
+
+.player::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0, 0.78);
+  border-radius: 20px;
+}
+
+.player::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+
+.filters {
+  margin: 15px 10px;
+  width: max-content;
+}
+
+select {
+  appearance: base-select;
+  font-family: Arial;
+  font-size: small;
+  background-color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  min-height: fit-content;
+  min-width: max-content;
+  letter-spacing: 0.5px;
+}
+
+select::picker(select) {
+  appearance: base-select;
+  font-size: small;
+  min-width: unset;
+  width: fit-content;
+  border-radius: 10px;
+  padding-right: 6px;
+  letter-spacing: 1px;
+}
+
+select::picker-icon {
+  transform: scale(80%);
+}
+/*
+option::checkmark {
+  appearance: base-select;
+  position: absolute;
+  left: auto;
+  right: 15px;
+  padding-bottom: 3px;
+}
+
+option {
+  margin: 0;
+  padding: 0 2px;
+  width: 100%;
+} */
+
+.current-song {
+  text-align: center;
+  margin: 10px;
+}
+
+p {
+  margin: 5px;
+}
+
+img {
+  margin: 10px;
+}
+
+h2 {
+  margin: 10px auto;
+  text-align: center;
+}
+
+header {
+  border-bottom: dashed black 2px;
+}
+
+.slider {
+  appearance: none;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  accent-color: black;
+  margin: 0 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.volume {
+  width: 50%;
+}
+
+.volume-hover {
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.song-time {
+  font-size: smaller;
+}
+
+.bottom-icons,
+.top-icons,
+.progress-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+
+.playlist {
+  margin: 15px 10px;
+  transform: translateY(-15px);
+}
+
+.top-icons,
+.bottom-icons {
+  margin: 20px 0;
+}
+
+.top-icons {
+  margin-bottom: 12px;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+
+.top-left,
+.top-right {
+  margin: 0;
+  max-width: 100%;
+}
+
+.top-left {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.playlist-icon {
+  margin: 15px 0;
+}
+
+.top-icon {
+  margin: 10px;
+}
+
+.top-right .top-icon {
+  margin: 0 0 0 10px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.ol-playlist {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+li {
+  margin: 5px 10px;
+  padding-right: 8px;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+li img {
+  width: 50px;
+  height: 50px;
+}
+
+li h5,
+li h6 {
+  margin: 0;
+}
+
+.song-name,
+.playlist-p {
+  font-weight: bold;
+}
+
+.playlist-p {
+  margin-left: 10px;
+}
+
+.artist {
+  font-size: smaller;
+  font-style: italic;
+}
+
+.song-image {
+  width: 150px;
+  height: 150px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.load-button,
+.unload-button {
+  width: 95px;
+  height: 25px;
+  font-family: Arial;
+  font-size: small;
+  background-color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  letter-spacing: 0.5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.top-icon:hover,
+.playlist-icon:hover,
+.slider:hover,
+.player::-webkit-scrollbar-thumb:hover,
+.filters:hover,
+.load-button:hover,
+.unload-button:hover,
+li:hover {
+  cursor: pointer;
+}
+
+.active-icon {
+  border-color: rgb(0, 0, 0, 0.5) !important;
+}

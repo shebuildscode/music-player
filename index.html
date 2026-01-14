@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b3af3ec4a2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="data:," type="image/x-icon" />
+    <title>Mood Music Player</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="player">
+        <header>
+          <h2>
+            <span class="fa-sharp fa-regular fa-xs fa-headphones"></span> Mood
+            Music Player
+          </h2>
+        </header>
+        <select class="filters">
+          <option value="instrumental" selected>instrumental</option>
+          <option value="chill">chill</option>
+          <option value="workout">workout</option>
+          <option value="night">night</option>
+        </select>
+        <div class="current-song">
+          <div class="top-icons">
+            <div class="top-left">
+              <span
+                class="fa-solid fa-volume-xmark fa-xs playlist-icon top-icon volume-icon hidden"
+              ></span>
+              <span
+                class="fa-solid fa-volume-high fa-xs playlist-icon top-icon volume-icon"
+              ></span>
+              <input
+                type="range"
+                class="slider volume hidden"
+                min="0"
+                max="100"
+                value="50"
+              />
+            </div>
+            <div class="top-right">
+              <span
+                class="fa-solid fa-repeat fa-xs playlist-icon top-icon"
+              ></span>
+              <span
+                class="fa-solid fa-shuffle fa-xs playlist-icon top-icon"
+              ></span>
+            </div>
+          </div>
+          <p class="song-name">
+            <span class="fa-solid fa-music fa-xs"></span> Song name
+          </p>
+          <p class="artist">Artist</p>
+          <img src="" class="song-image" alt="not added yet" />
+        </div>
+        <div>
+          <audio id="audio"></audio>
+          <div class="progress-bar">
+            <span class="song-time song-start">0:00</span>
+            <input
+              type="range"
+              class="slider"
+              id="song-slider"
+              min="0"
+              max="150"
+              value="0"
+            />
+            <span class="song-time song-end">0:00</span>
+          </div>
+
+          <div class="bottom-icons">
+            <span class="fa-solid fa-backward-step fa-xs playlist-icon"></span>
+            <span class="fa-solid fa-play fa-xs playlist-icon"></span>
+            <span class="fa-solid fa-pause fa-xs playlist-icon hidden"></span>
+            <span class="fa-solid fa-forward-step fa-xs playlist-icon"></span>
+          </div>
+        </div>
+        <div class="playlist">
+          <p class="playlist-p">PLAYLIST:</p>
+          <ol class="ol-playlist">
+            <li>song 1</li>
+            <li>song 2</li>
+            <li>song 3</li>
+          </ol>
+          <div class="buttons">
+            <button class="unload-button hidden">Show less</button>
+            <button class="load-button">Show more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
