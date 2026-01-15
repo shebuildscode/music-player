@@ -2,6 +2,8 @@
 
 A fully-featured music player with custom controls, category filters, and shuffle functionality with history tracking. Built with vanilla JavaScript and the Jamendo API.
 
+_**[🚀 Check out live demo here](https://shebuildscode.github.io/music-player/)**_
+
 ![Music Player Screenshot](./player-merged.png)
 
 ## 🎥 See it in action
@@ -58,11 +60,15 @@ git clone https://github.com/shebuildscode/music-player.git
 cd music-player
 ```
 
+_Don't want to install? **[🚀 Check out live demo here](https://shebuildscode.github.io/music-player/)**_
+
 ### Client ID Setup
 
-1. Get a free client ID from [JamendoAPI.com](https://developer.jamendo.com/v3.0)
+**For your own development:**
 
-2. Rename `config.example.js` to `config.js` and add your client ID key
+1. Get a free client ID from [JamendoAPI](https://developer.jamendo.com/v3.0)
+
+2. Replace the existing client ID with your own in `config.js`
 
 ```javascript
 export const CLIENT_ID = "your_client_ID_here";
